@@ -1,8 +1,24 @@
 aid: getdinghy
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/getdinghy.png
 name: getdinghy
-description: getdinghy is a company surfaced as a portfolio company of balderton-capital and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Dinghy (getdinghy.com) was a UK insurtech offering on-demand professional indemnity and
+  business insurance for freelancers and contractors, and a Balderton Capital portfolio company. As of
+  this enrichment pass the domain no longer serves an independent site - its TLS certificate and HTTP
+  responses resolve to Kingsbridge Group infrastructure (kingsbridge.co.uk / kingsbridgegroup.com / kng.io)
+  and every path returns HTTP 502, indicating the brand has been absorbed by Kingsbridge. No public API,
+  developer portal, documentation, SDK, or well-known discovery surface is exposed, so no spec-grounded
+  artifacts could be searched or derived. Retained as a network lead with evidence of the successor.
 url: https://raw.githubusercontent.com/api-evangelist/getdinghy/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +26,19 @@ x-backed-by:
 - balderton-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-successor: kingsbridge
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Insurance
+- InsurTech
+- Freelancers
+- Contractors
+- United Kingdom
+- Financial Services
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +46,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/getdinghy-domain-security.yml
 - type: Website
   url: https://getdinghy.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
